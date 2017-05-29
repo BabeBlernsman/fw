@@ -1,0 +1,17 @@
+<h1><%= t('general.answer') %></h1>
+
+<%= form_tag("/tickets/#{params[:ticket_id]}/answer", method: "post") do |f| %>
+  
+
+  <div class="field">
+    <%= label_tag t('ticket.form.body') %>
+    <%= text_area_tag :body %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag(t('general.answer')) %>
+  </div>
+<% end %>
+
+
+<%= link_to t('general.back'), tickets_path %>

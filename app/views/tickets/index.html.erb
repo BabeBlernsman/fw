@@ -1,0 +1,29 @@
+<h1>Tickets</h1>
+
+<table style="width: 80%; margin: auto;">
+  <thead>
+    <tr>
+      <th><%= t('ticket.form.title') %></th>
+      <th><%= t('ticket.infos.assigned') %></th>
+      <th><%= t('ticket.infos.access') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket_new_answer(ticket) %></td>
+        <td><%= assign_status_string(ticket) %></td>
+        <td><%= acces_string(ticket) %></td>
+        <td><%= link_to t('general.show'), ticket %></td>
+        <!-- <td><%#= link_to 'Edit', edit_ticket_path(ticket) if current_user.admin? %></td> -->
+        <!-- <td><%#= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } if current_user.admin?%></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('ticket.new.ticket'), new_ticket_path %>

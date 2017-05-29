@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= link_to locked_unlocked(@ticket), ticket_open_close_path(@ticket) %> <%= "#{@ticket.title} #{t('ticket.infos.from')} #{@ticket_owner.email}" %></h3>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item"><b><%= t('ticket.infos.assigned') %> :</b> <%= assign_status_string(@ticket) %></li>
+    <li class="list-group-item"><b><%= t('ticket.infos.access') %> :</b> <%= acces_string(@ticket) %></li>
+    <li class="list-group-item"><b><%= t('ticket.form.body') %> :</b> <%= @ticket.body %></li>
+  </ul>
+</div>
+
+<% @answers.each do |answer| %>
+  <div class="<%= User.find(answer.author).admin? ? "panel panel-info" : "panel panel-default" %>">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= t('answer.answer_from') %> <%= User.find(answer.author).email %> <b>(ADMIN)</b></h3>
+    </div>
+    <div class="panel-body">
+      <%= answer.body %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to t('general.back'), tickets_path %>
+<%= link_to " | #{t('ticket.infos.answer')}", ticket_answer_path(@ticket) if (@ticket.answers.any? && (@ticket.answers.last.author != current_user.id) && @ticket.open?)%>

@@ -1,0 +1,32 @@
+en:
+  navbar_sign_up: "Sign up"
+  navbar_sign_in: "Log in"
+  navbar_log_out: "Log out"
+  navbar_edit_profile: "Edit profile"
+  ticket:
+    new:
+      ticket: "New ticket"
+    create:
+      ticket: "Ticket was successfully created."
+    form:
+      title: "Title"
+      body: "Body"
+      btn: "Create"
+    infos:
+      assigned: "Assigned"
+      access: "Access"
+      from: "BY"
+      answer: "Answer"
+      not_assigned: "Not assigned"
+      access_open: "Open"
+      access_locked: "Locked"
+  general:
+    back: "Back"
+    show: "Show"
+    answer: "Answer"
+    destroy: "Destroy"
+    destroy_conf: "Are you sure?"
+  spool:
+    title_assign: "Assign ticket to an admin"
+  answer:
+    answer_from : "Answer from"

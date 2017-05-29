@@ -1,0 +1,32 @@
+fr:
+  navbar_sign_up: "S'enregistrer"
+  navbar_sign_in: "Se connecter"
+  navbar_log_out: "Deconnexion"
+  navbar_edit_profile: "Editer profil"
+  ticket:
+    new:
+      ticket: "Nouveau ticket"
+    create:
+      ticket: "Ticket créé avec succès."
+    form:
+      title: "Titre"
+      body: "Corps"
+      btn: "Créer"
+    infos:
+      assigned: "Assigné"
+      access: "Accès"
+      from: "DE"
+      answer: "Répondre"
+      not_assigned: "Non assigné"
+      access_open: "Ouvert"
+      access_locked: "Verrouillé"
+  general:
+    back: "Retour"
+    show: "Voir"
+    answer: "Répondre"
+    destroy: "Detruire"
+    destroy_conf: "Etes vous sur?"
+  spool:
+    title_assign: "Assigner ticket à un admin"
+  answer:
+    answer_from : "Réponse de"
